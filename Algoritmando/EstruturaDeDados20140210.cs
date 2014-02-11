@@ -11,10 +11,12 @@ namespace Algoritmando
         static int[] vetor = new int[max];
         static int pos = 0;
 
-        public static void exercicioPilha() { 
+        public static void pilha() { 
            int op;
             do{
-                Console.WriteLine(" Digite uma opção: \n 1) Inserir na pilha\n 2) Remover da pilha\n 3) Listar Pilha\n 4) Sair");
+                Console.WriteLine("\nSelecione : ------------------------------------");
+                Console.WriteLine(" 1) Inserir na pilha\n 2) Remover da pilha\n 3) Listar Pilha\n 4) Sair");
+                Console.Write(">");
                 op = int.Parse(Console.ReadLine());
                 
                 switch(op){             
@@ -29,6 +31,8 @@ namespace Algoritmando
                         break;
                     case 3 :
                         listar();
+                        break;
+                    case 4:
                         break;
                     default:
                         Console.WriteLine("Selecione uma Opção válida");

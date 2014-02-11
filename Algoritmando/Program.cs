@@ -14,7 +14,7 @@ namespace Algoritmando
              * Estrutura de Dados - Luiz Antônio
              * Pilha
              */
-            EstruturaDeDados20140210.exercicioPilha();
+            EstruturaDeDados20140210.pilha();
         
         }
     }
