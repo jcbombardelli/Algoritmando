@@ -39,7 +39,12 @@ namespace Algoritmando
              * Desenvolver um algoritmo que receba uma expressão matematica
              * e informa se ela é valida, utilizando PILHA
              */
-            EstruturaDeDados20140217.expressaoMatematicaTP();
+           // EstruturaDeDados20140217.expressaoMatematicaTP();
+
+
+            EstruturaDeDados20140220.main();
+
+           // Compiladores20140224.main();
         }
     }
 }

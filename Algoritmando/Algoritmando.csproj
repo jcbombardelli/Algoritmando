@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compiladores20140210.cs" />
+    <Compile Include="Compiladores20140224.cs" />
     <Compile Include="Compiladores20140217.cs" />
     <Compile Include="EstruturaDeDados20140210.cs" />
     <Compile Include="EstruturaDeDados20140213.cs" />
     <Compile Include="EstruturaDeDados20140217.cs" />
+    <Compile Include="EstruturaDeDados20140220.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

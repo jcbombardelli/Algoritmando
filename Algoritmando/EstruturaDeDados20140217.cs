@@ -44,49 +44,57 @@ namespace Algoritmando
             EstruturaDeDados20140217 pp = new EstruturaDeDados20140217();
             string escolha;
             string LAtual;
+            bool jaz = false;
 
-            Console.WriteLine("\ninsira a expressao: ------------------------------------");
+            Console.WriteLine("\nInsira a expressao: ");
             Console.Write(">");
-            escolha = Console.ReadLine();
+            escolha = "(())";//Console.ReadLine();
 
-            for (int i = 0; i < escolha.Length; i++) {
+            for (int i = 0; i <= escolha.Length; i++)
+            {
                 LAtual = escolha.Substring(i, 1);
 
+
                 if (LAtual == "(" || LAtual == "{" || LAtual == "[")
-                    pp.push(LAtual, ref topo);
-
-                if (LAtual == ")" || LAtual == "}" || LAtual == "]")
                 {
-                    if (topo == null)
-                    {
-                        Console.WriteLine("expressao invalida");
-                    }
-                    else 
-                        if (topo.info == "(" && LAtual == ")")
-                    {
-                        pp.pop(ref topo);
-                    }
-                    else if (topo.info == "{" && LAtual == "}")
-                    {
-                        pp.pop(ref topo);
-                    }
-                    else if (topo.info == "[" && LAtual == "]")
-                    {
-                        pp.pop(ref topo);
-                    }
+                    pp.push(LAtual, ref topo);
+                    jaz = true;
+                }
 
+                else if (LAtual == ")" || LAtual == "}" || LAtual == "]")
+                {
+
+                    if (topo == null && jaz == false)
+                    {
+                        Console.WriteLine("Expressão Invalida");
+                    }
+                    else if (topo.info == "(" && LAtual == ")")
+                    {
+                        pp.pop(ref topo);
+                    }
                     else
-                        Console.WriteLine("FOUDASEEEEE invalida");
+                        if (topo.info == "{" && LAtual == "}")
+                        {
+                            pp.pop(ref topo);
+                        }
+                        else
+                            if (topo.info == "[" && LAtual == "]")
+                            {
+                                pp.pop(ref topo);
+                            }
+                            else
+                            {
+                                Console.WriteLine("FOUDASEEEEE invalida");
+                            }
                 }
-                else
-                    continue;
-                }
-
-                if (topo == null)
-                    Console.WriteLine("Expressao Ok");
-                else
-                    Console.WriteLine("Falha no engano");
-                Console.ReadKey();
             }
+
+            if (topo == null && jaz == true)
+                Console.WriteLine("Expressao Ok");
+            else if (topo != null)
+                Console.WriteLine("Expressão invalida, topo nao esta nulo");
+            Console.ReadKey();
+
         }
     }
+}
