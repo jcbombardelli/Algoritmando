@@ -64,11 +64,13 @@ public class Pilha {
 		push(15);
 		push(42);
 		push(30);
-		//System.out.println("-------------------------");
-		pop();
-		push(8);
-		all();
 		System.out.println("-------------------------");
+		pop();
+		//push(8);
+		//all();
+		System.out.println("-------------------------");
+		top();
+		pop();
 		top();
 
 	}

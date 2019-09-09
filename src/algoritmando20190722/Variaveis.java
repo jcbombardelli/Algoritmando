@@ -10,8 +10,9 @@ public class Variaveis {
 		int numero = 7;
 		int dez = 10;
 		float reais = 2.50f;
+		double meusReais = 3.5;
 		boolean ehPositivo = false;
-		char operacao = '+';
+		char operacao = 'b';
 
 		System.out.println(numero + dez);
 		System.out.println(reais);

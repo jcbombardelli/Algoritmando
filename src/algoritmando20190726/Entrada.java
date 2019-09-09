@@ -18,7 +18,7 @@ public class Entrada {
 		
 		
 		if(operador == "+") {
-			
+
 			int resultado = somaDeDoisInteiros(b1, b2);
 			System.out.println("O resultado da soma é: " + resultado);
 		}
